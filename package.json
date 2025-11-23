@@ -1,0 +1,53 @@
+{
+  "name": "cordova-plugin-mcc-mlkit-barcode-scanner",
+  "version": "3.0.7",
+  "description": "Google MLKit Vision Barcode Scanner Plugin with 16 KB page size support",
+  "cordova": {
+    "id": "cordova-plugin-mcc-mlkit-barcode-scanner",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "mlkit",
+    "barcode",
+    "scanner"
+  ],
+  "author": "MCC",
+  "license": "MIT",
+  "main": "www/BarcodeScanner.contract.js",
+  "prettier": "@teckel.ts-internal/prettier-config",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "npm run lint && npm run clean && npm run transpile",
+    "clean": "mkdir -p 'www' && find 'www' ! -path 'www' -delete",
+    "lint": "eslint . --ext .js,.ts --cache && tsc -p tsconfig.lint.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "rollup --config --silent",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "/src/",
+    "/www/**/*.{js,js.map,d.ts}",
+    "/plugin.xml"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-node-resolve": "13.0.4",
+    "@teckel.ts-internal/eslint-config": "3.0.0",
+    "@teckel.ts-internal/prettier-config": "1.0.0",
+    "@teckel.ts-internal/ts-config": "2.0.1",
+    "@types/cordova": "0.0.34",
+    "@types/node": "16.7.1",
+    "eslint": "7.32.0",
+    "rollup": "2.56.3",
+    "rollup-plugin-typescript2": "0.30.0",
+    "tslib": "2.3.1"
+  }
+}
