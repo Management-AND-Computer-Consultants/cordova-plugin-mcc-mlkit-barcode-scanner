@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mcc-mlkit-barcode-scanner",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Google MLKit Vision Barcode Scanner Plugin with 16 KB page size support",
   "cordova": {
     "id": "cordova-plugin-mcc-mlkit-barcode-scanner",
