@@ -1,16 +1,17 @@
 {
-  "extends": "@teckel.ts-internal/ts-config/tsconfig.json",
   "include": [
     "./**/.eslintrc.js",
-    "./rollup.config.js",
+    "./rollup.config.mjs",
     "./src-typescript/**/*.ts",
     "./types/**/*.ts"
   ],
   "exclude": ["./test/"],
   "compilerOptions": {
+    "target": "ES2017",
     "module": "ES2015",
     "outDir": "www",
     "skipLibCheck": true,
-    "types": ["@types/cordova", "@types/node"]
+    "declaration": false,
+    "sourceMap": true
   }
 }

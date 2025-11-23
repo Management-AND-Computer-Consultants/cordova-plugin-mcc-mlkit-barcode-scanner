@@ -19,8 +19,11 @@ const options = {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.dist.json',
+      check: false
     }),
   ],
 };
 
 export default options;
+
+
